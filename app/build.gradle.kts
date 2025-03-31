@@ -45,6 +45,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.1")
+    implementation("androidx.annotation:annotation:1.8.2")
 
     val dagger_version = "2.51.1"
     implementation("com.google.dagger:dagger:$dagger_version")

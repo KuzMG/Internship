@@ -1,6 +1,7 @@
 package com.example.internship2025.di.module
 
 import androidx.lifecycle.ViewModel
+import com.example.internship2025.ui.auth.AuthViewModel
 import com.example.internship2025.ui.splash_screen.SplashScreenViewModel
 import dagger.Binds
 import dagger.MapKey
@@ -13,7 +14,8 @@ interface ViewModelModule {
     @[Binds IntoMap ViewModelKey(SplashScreenViewModel::class)]
     fun provideSplashScreenViewModel(splashScreenViewModel: SplashScreenViewModel): ViewModel
 
-
+    @[Binds IntoMap ViewModelKey(AuthViewModel::class)]
+    fun provideAuthViewModel(AuthViewModel: AuthViewModel): ViewModel
 }
 
 
