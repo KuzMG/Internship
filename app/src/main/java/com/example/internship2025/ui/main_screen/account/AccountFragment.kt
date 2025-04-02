@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.internship2025.databinding.FragmentAccountBinding
 
-class AccountFragment : Fragment() {
+class  AccountFragment : Fragment() {
 
 
     private lateinit var binding: FragmentAccountBinding

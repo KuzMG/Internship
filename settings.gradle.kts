@@ -1,3 +1,6 @@
+include(":core")
+
+
 pluginManagement {
     repositories {
         google()
@@ -15,4 +18,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Internship2025"
 include(":app")
- 
+include(":commons:ui")
+include(":features:course")

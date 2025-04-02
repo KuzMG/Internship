@@ -1,0 +1,4 @@
+<resources>
+    <string name="price">%1s ₽</string>
+    <string name="details">Подробнее</string>
+</resources>

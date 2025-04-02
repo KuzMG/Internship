@@ -2,6 +2,8 @@ package com.example.internship2025.di.module
 
 import androidx.lifecycle.ViewModel
 import com.example.internship2025.ui.auth.AuthViewModel
+import com.example.internship2025.ui.main_screen.favorites.FavoritesViewModel
+import com.example.internship2025.ui.main_screen.home.HomeViewModel
 import com.example.internship2025.ui.splash_screen.SplashScreenViewModel
 import dagger.Binds
 import dagger.MapKey
@@ -15,7 +17,13 @@ interface ViewModelModule {
     fun provideSplashScreenViewModel(splashScreenViewModel: SplashScreenViewModel): ViewModel
 
     @[Binds IntoMap ViewModelKey(AuthViewModel::class)]
-    fun provideAuthViewModel(AuthViewModel: AuthViewModel): ViewModel
+    fun provideAuthViewModel(authViewModel: AuthViewModel): ViewModel
+
+    @[Binds IntoMap ViewModelKey(HomeViewModel::class)]
+    fun provideHomeViewModel(homeViewModel: HomeViewModel): ViewModel
+
+    @[Binds IntoMap ViewModelKey(FavoritesViewModel::class)]
+    fun provideFavoritesViewModel(favoritesViewModel: FavoritesViewModel): ViewModel
 }
 
 

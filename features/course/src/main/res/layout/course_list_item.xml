@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="236dp"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/card_background"
+    android:backgroundTint="@color/dark_gray">
+
+
+    <FrameLayout
+        android:id="@+id/image_frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            app:cardCornerRadius="16dp">
+
+            <ImageView
+                android:id="@+id/course_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/rate_card_view"
+        app:layout_constraintLeft_toLeftOf="@id/rate_card_view"
+        app:layout_constraintRight_toRightOf="@id/rate_card_view"
+        app:layout_constraintTop_toTopOf="@id/rate_card_view">
+        <ImageView
+            android:id="@+id/rate_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/glass"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rate_card_view"
+        android:layout_width="wrap_content"
+        android:minWidth="46dp"
+        android:layout_height="22dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/image_frame_layout"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/start_image_View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:src="@drawable/ic_star"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rate_text_view"
+            style="@style/Internship2025.TextView.Small"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            app:layout_constraintLeft_toRightOf="@id/start_image_View"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="5.4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/start_date_text_view"
+        app:layout_constraintLeft_toLeftOf="@id/start_date_text_view"
+        app:layout_constraintRight_toRightOf="@id/start_date_text_view"
+        app:layout_constraintTop_toTopOf="@id/start_date_text_view">
+        <ImageView
+            android:id="@+id/start_date_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/glass"
+            />
+    </androidx.cardview.widget.CardView>
+        <TextView
+            style="@style/Internship2025.TextView.Small"
+            android:id="@+id/start_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:layout_marginStart="5dp"
+            android:paddingHorizontal="7dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/image_frame_layout"
+            app:layout_constraintLeft_toRightOf="@id/rate_card_view"
+            tools:text="22 мая 2024" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_frame_layout">
+
+        <TextView
+            android:id="@+id/title_text_view"
+            style="@style/Internship2025.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Java-разработчик с нуля" />
+
+        <TextView
+            android:id="@+id/text_text_view"
+            style="@style/Internship2025.TextView.Subtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintBottom_toTopOf="@id/price_text_view"
+            app:layout_constraintTop_toBottomOf="@id/title_text_view"
+            tools:text="Освойте backend-разработку и программирование на Java, фреймворки Spring и Maven, работу с базами данных и API. Создайте свой собственный проект, собрав портфолио и став востребованным специалистом для любой IT компании." />
+
+        <TextView
+            android:id="@+id/price_text_view"
+            style="@style/Internship2025.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="999 р" />
+
+
+        <LinearLayout
+            android:id="@+id/details_linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                style="@style/Internship2025.TextView.Small.Click"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="4dp"
+                android:text="@string/details" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_arrow_right" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/favorites_button"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/dark_30"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_favorites_16"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

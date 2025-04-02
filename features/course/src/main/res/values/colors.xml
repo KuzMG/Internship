@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_30">#32333A4D</color>
+    <color name="dark_gray">#24252A</color>
+    <color name="glass">#32333A4D</color>
+    <color name="white">#F1F1F2</color>
+    <color name="white_50">#80F1F1F2</color>
+    <color name="green">#12B856</color>
+</resources>

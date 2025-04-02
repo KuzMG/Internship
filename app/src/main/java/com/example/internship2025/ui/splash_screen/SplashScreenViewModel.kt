@@ -1,7 +1,7 @@
 package com.example.internship2025.ui.splash_screen
 
 import androidx.lifecycle.ViewModel
-import com.example.internship2025.repository.QueryPreferences
+import com.example.core.repository.QueryPreferences
 import javax.inject.Inject
 
 class SplashScreenViewModel @Inject constructor(private val queryPreferences: QueryPreferences) :

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Internship2025</string>
-    <string name="title_home">Home</string>
-    <string name="title_favorites">Favorites</string>
-    <string name="title_account">Account</string>
+    <string name="title_home">Главная</string>
+    <string name="title_favorites">Избранное</string>
+    <string name="title_account">Аккаунт</string>
     <string name="continue_button">Продолжить</string>
     <string name="title_activity_auth">AuthActivity</string>
     <string name="auth_email_edit_text">example@gmail.com</string>
@@ -21,4 +21,7 @@
     <string name="auth_forgot_password_text_view">Забыл пароль</string>
     <string name="onbording">Тысячи курсов одном месте</string>
     <string name="auth_registration_error_email">Некорректный email</string>
+    <string name="search_courses">Search courses...</string>
+    <string name="date_sorting">По дате добавления</string>
+
 </resources>

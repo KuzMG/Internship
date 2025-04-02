@@ -37,12 +37,37 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="Internship2025.TextView.Subtext">
+        <item name="android:textColor">@color/white_50</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
     <style name="Internship2025.TextView.Small">
         <item name="android:textSize">12sp</item>
     </style>
 
     <style name="Internship2025.TextView.Small.Click">
         <item name="android:textColor">@color/green</item>
-
     </style>
+    <style name="Internship2025.TextView.Small.Click.Filter">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Internship2025.BottomNavigationView" parent="Widget.Material3.BottomNavigationView">
+        <item name="android:background">@drawable/bottom_navigation_view_background</item>
+        <item name="itemActiveIndicatorStyle">@style/Internship2025.ActiveIndicator</item>
+        <item name="itemTextAppearanceActive">@style/Internship2025.itemTextAppearance</item>
+        <item name="itemTextAppearanceInactive">@style/Internship2025.itemTextAppearance</item>
+        <item name="itemIconTint">@color/bottom_navigation_view_text</item>
+        <item name="itemTextColor">@color/bottom_navigation_view_text</item>
+    </style>
+    <style name="Internship2025.itemTextAppearance" parent="@style/TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Internship2025.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/light_gray</item>
+    </style>
+
+
 </resources>

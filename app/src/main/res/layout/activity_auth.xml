@@ -155,6 +155,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="502dp"
+        app:dividerColor="#4D555E"
         app:layout_constraintTop_toTopOf="parent" />
 
 

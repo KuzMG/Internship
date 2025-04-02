@@ -1,19 +1,18 @@
 package com.example.internship2025.ui.auth
 
-import android.R.attr.end
-import android.R.attr.start
 import android.os.Bundle
-import android.text.InputFilter
-import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.example.core.repository.data.Status
 import com.example.internship2025.databinding.ActivityAuthBinding
-import com.example.internship2025.ui.auth.data.Status
+import com.example.internship2025.extensions.appComponent
 import com.example.internship2025.ui.main_screen.MainScreenActivity
-import com.example.internship2025.ui.util.TextWatcher
-import com.example.internship2025.utils.appComponent
-import com.example.internship2025.utils.startActivity
+import com.example.ui.extensions.isVisible
+import com.example.ui.extensions.showToast
+import com.example.ui.extensions.startActivity
+import com.example.ui.extensions.startActivityBrowser
+import com.example.ui.input_filter.InputFilterCyrillic
+import com.example.ui.text_watcher.TextWatcher
 
 
 class AuthActivity : AppCompatActivity() {
@@ -23,7 +22,7 @@ class AuthActivity : AppCompatActivity() {
     }
     private lateinit var binding: ActivityAuthBinding
 
-    val textWatcher = object : TextWatcher() {
+    private val textWatcher = object : TextWatcher() {
         override fun textChanged(text: String) {
             viewModel.check(
                 binding.emailEditText.text.toString(),
@@ -31,13 +30,7 @@ class AuthActivity : AppCompatActivity() {
             )
         }
     }
-    val inputFilter = InputFilter { chs, start, end, _, _, _ ->
-        val input: String = chs.subSequence(start, end).toString()
-        return@InputFilter if (input.matches(".*[\\p{IsCyrillic}].*".toRegex())) {
-            ""
-        } else null
 
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +39,7 @@ class AuthActivity : AppCompatActivity() {
         binding.run {
             emailEditText.setText(viewModel.email)
             passwordEditText.setText(viewModel.password)
-            emailEditText.filters = arrayOf(inputFilter)
+            emailEditText.filters = arrayOf(InputFilterCyrillic())
         }
         viewModel.run {
             authFormState.observe(this@AuthActivity) { state ->
@@ -57,15 +50,13 @@ class AuthActivity : AppCompatActivity() {
                 }
             }
             authResult.observe(this@AuthActivity) {
-                it ?: return@observe
                 val result = it.getOrDefault(Status.ERROR)
                 binding.run {
-                    enterButton.visibility =
-                        isVisible(result == Status.OK || result == Status.ERROR)
-                    progressBar.visibility = isVisible(result == Status.LOADING)
+                    enterButton.isVisible(result == Status.OK || result == Status.ERROR)
+                    progressBar.isVisible(result == Status.LOADING)
                 }
                 it.exceptionOrNull()?.let { e ->
-                    toast(e.message.toString())
+                    showToast(e.message.toString())
                 }
                 if (result == Status.OK) {
                     startActivity<MainScreenActivity>()
@@ -82,19 +73,13 @@ class AuthActivity : AppCompatActivity() {
             enterButton.setOnClickListener {
                 viewModel.auth()
             }
+            vkButton.setOnClickListener {
+                startActivityBrowser("https://vk.com/")
+            }
+            okButton.setOnClickListener {
+                startActivityBrowser("https://ok.ru/")
+            }
         }
 
     }
-
-    private fun isVisible(flag: Boolean) = if (flag) {
-        View.VISIBLE
-    } else {
-        View.INVISIBLE
-    }
-
-    private fun toast(text: String) {
-        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
-    }
-
-
 }
