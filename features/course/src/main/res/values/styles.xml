@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Internship2025.TextView" parent="@style/Widget.MaterialComponents.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Internship2025.TextView.Subtext">
+        <item name="android:textColor">@color/white_50</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Internship2025.TextView.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Internship2025.TextView.Small.Click">
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+
+</resources>
