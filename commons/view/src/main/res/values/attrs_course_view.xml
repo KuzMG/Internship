@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="CourseView">
+        <attr name="text" format="string" />
+        <attr name="backgroundColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+</resources>

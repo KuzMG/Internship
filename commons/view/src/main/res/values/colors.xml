@@ -1,0 +1,9 @@
+<resources>
+    <color name="light_blue_400">#FF29B6F6</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="gray_400">#FFBDBDBD</color>
+    <color name="gray_600">#FF757575</color>
+    <color name="glass">#32333A4D</color>
+    <color name="white">#F2F2F3</color>
+    <color name="green">#12B956</color>
+</resources>

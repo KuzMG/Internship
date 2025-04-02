@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="CourseRotateView">
+        <attr name="rtext" format="string" />
+        <attr name="rrotate" format="integer" />
+        <attr name="rbackgroundColor" format="color" />
+        <attr name="rtextColor" format="color" />
+    </declare-styleable>
+</resources>

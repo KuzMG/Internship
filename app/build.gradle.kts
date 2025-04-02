@@ -43,6 +43,7 @@ android {
 dependencies {
     implementation(project(":features:course"))
     implementation(project(":commons:ui"))
+    implementation(project(":commons:view"))
     implementation(project(":core"))
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.7.0")

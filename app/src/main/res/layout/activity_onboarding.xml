@@ -1,32 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.onboarding.OnboardingActivity">
-<TextView
-    style="@style/Internship2025.TextView.Title"
-    android:id="@+id/onbording_text_view"
-    android:layout_width="250dp"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="140dp"
-    android:text="@string/onbording"
-    android:gravity="center"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-   />
-    <Button
-        style="@style/Internship2025.Button"
-        android:id="@+id/continue_button"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="@string/continue_button"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <TextView
+        android:id="@+id/onbording_text_view"
+        style="@style/Internship2025.TextView.Title"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:text="@string/onbording"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/onbording_text_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="1С Администрирование"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toRightOf="@+id/item1"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/green"
+                app:rrotate="-15"
+                app:rtext="RabbitMQ"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rtext="Трафик"
+                app:rtextColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="99dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="UX исследователь"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toRightOf="@+id/item1"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="Веб-аналитика"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/green"
+                app:rrotate="15"
+                app:rtext="Big Data"
+                app:rtextColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="Контент маркетинг"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toRightOf="@+id/item1"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="B2B маркетинг"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rtext="Google Аналитика"
+                app:rtextColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="195dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="Webflow"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toRightOf="@+id/item1"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/green"
+                app:rrotate="-15"
+                app:rtext="Three.js"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rtext="Парсинг"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rtext="Python-разработка"
+                app:rtextColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="159dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="Геймдизайн"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="4dp"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toRightOf="@+id/item1"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rrotate="0"
+                app:rtext="Веб-дизайн"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="4dp"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rtext="Cinema 4D"
+                app:rtextColor="@color/white" />
+
+            <com.example.view.CourseRotateView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:layout_constraintBottom_toTopOf="@id/continue_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/onbording_text_view"
+                app:rbackgroundColor="@color/glass"
+                app:rtext="Промпт инженеринг"
+                app:rtextColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/continue_button"
+        style="@style/Internship2025.Button"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/continue_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

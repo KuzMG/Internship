@@ -20,3 +20,4 @@ rootProject.name = "Internship2025"
 include(":app")
 include(":commons:ui")
 include(":features:course")
+include(":commons:view")
